@@ -4,21 +4,30 @@ document.addEventListener("DOMContentLoaded", function() {
     const sidebar = document.getElementById("sidebar");
     const overlay = document.getElementById("overlay");
 
-    // Fungsi untuk membuka menu
-    menuToggle.addEventListener("click", function() {
-        sidebar.classList.add("active");
-        overlay.classList.add("active");
-    });
+    // Buka Sidebar
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function() {
+            sidebar.classList.add("active");
+            overlay.classList.add("active");
+            document.body.style.overflow = "hidden"; // kunci scroll body utama saat menu buka
+        });
+    }
 
-    // Fungsi untuk menutup menu lewat tombol X
-    closeMenu.addEventListener("click", function() {
-        sidebar.classList.remove("active");
-        overlay.classList.remove("active");
-    });
+    // Tutup Sidebar lewat tombol X
+    if (closeMenu) {
+        closeMenu.addEventListener("click", function() {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "auto";
+        });
+    }
 
-    // Fungsi untuk menutup menu saat area gelap (overlay) ditekan
-    overlay.addEventListener("click", function() {
-        sidebar.classList.remove("active");
-        overlay.classList.remove("active");
-    });
+    // Tutup Sidebar jika mengetuk area blur hitam luar
+    if (overlay) {
+        overlay.addEventListener("click", function() {
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "auto";
+        });
+    }
 });
