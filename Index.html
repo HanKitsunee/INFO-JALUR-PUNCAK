@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Jalur Puncak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sidebar-overlay" id="overlay"></div>
+
+    <div class="app-background">
+        
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <span>PuncakInfo</span>
+                <button class="close-menu" id="close-menu"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active"><i class="fas fa-home"></i> Beranda</a>
+                <a href="#" class="nav-item"><i class="fas fa-road"></i> Info Arus</a>
+                <a href="#" class="nav-item"><i class="fas fa-video"></i> Live CCTV</a>
+                <a href="#" class="nav-item"><i class="far fa-calendar-alt"></i> Jadwal Buka Tutup</a>
+                <a href="#" class="nav-item"><i class="fas fa-users"></i> Komunitas</a>
+            </nav>
+
+            <div class="download-app">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Dapatkan Notif di HP-mu</p>
+                <button>Download App</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+                    <div class="greeting">
+                        <h1>Halo, Pengendara 👋</h1>
+                        <p class="subtitle">Pantau arus lalu lintas Puncak hari ini.</p>
+                    </div>
+                </div>
+                
+                <div class="search-profile">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Cari titik lokasi...">
+                    </div>
+                    <img src="https://ui-avatars.com/api/?name=User&background=D4F97C&color=000" alt="Profile" class="profile-pic">
+                </div>
+            </header>
+
+            <section class="hero-banner">
+                <div class="banner-content">
+                    <span class="badge live-badge"><i class="fas fa-circle"></i> LIVE UPDATE</span>
+                    <h2>SATU ARAH KE ATAS <br>(JAKARTA ➔ PUNCAK)</h2>
+                    <p>Kondisi Saat Ini: <strong>Padat Merayap</strong> di area Megamendung.</p>
+                    <div class="weather-info">
+                        <i class="fas fa-cloud-sun"></i> Cerah Berawan | 22°C
+                    </div>
+                </div>
+            </section>
+
+            <div class="content-grid">
+                <div class="traffic-spots">
+                    <h3>Titik Lokasi Utama</h3>
+                    <div class="cards-wrapper">
+                        <div class="info-card">
+                            <div class="card-icon blue"><i class="fas fa-car-side"></i></div>
+                            <div class="card-text">
+                                <h4>Simpang Gadog</h4>
+                                <p>Ramai Lancar</p>
+                            </div>
+                            <div class="status-dot green"></div>
+                        </div>
+                        <div class="info-card">
+                            <div class="card-icon orange"><i class="fas fa-car-side"></i></div>
+                            <div class="card-text">
+                                <h4>Megamendung</h4>
+                                <p>Padat Merayap</p>
+                            </div>
+                            <div class="status-dot red"></div>
+                        </div>
+                        <div class="info-card">
+                            <div class="card-icon green"><i class="fas fa-car-side"></i></div>
+                            <div class="card-text">
+                                <h4>Taman Safari</h4>
+                                <p>Lengang</p>
+                            </div>
+                            <div class="status-dot green"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-section">
+                    <h3>Jadwal Satu Arah (Prediksi)</h3>
+                    <div class="schedule-card current">
+                        <div class="time">07:00 - 12:00</div>
+                        <div class="desc">
+                            <strong>Ke Atas (Puncak)</strong>
+                            <span>Sedang Berlangsung</span>
+                        </div>
+                    </div>
+                    <div class="schedule-card upcoming">
+                        <div class="time">13:00 - 18:00</div>
+                        <div class="desc">
+                            <strong>Ke Bawah (Jakarta)</strong>
+                            <span>Segera Dimulai</span>
+                        </div>
+                    </div>
+                    <div class="schedule-card normal">
+                        <div class="time">18:00 - 06:00</div>
+                        <div class="desc">
+                            <strong>Normal Dua Arah</strong>
+                            <span>Ganjil-Genap Berlaku</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
